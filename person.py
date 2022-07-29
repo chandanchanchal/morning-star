@@ -12,3 +12,8 @@ class Person:
     # Behavior (instance methods)
     def work(self):
         print(self.name, 'working as a', self.profession)
+        
+p1 = Person('person1','Male','SSE')
+
+p1.show();
+p1.work();
