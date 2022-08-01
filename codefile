@@ -12,3 +12,10 @@ x = np.array([('Rex', 9, 81.0), ('Fido', 3, 27.0)],
 x
 array([('Rex', 9, 81.), ('Fido', 3, 27.)],
       dtype=[('name', '<U10'), ('age', '<i4'), ('weight', '<f4')])
+air_quality_renamed = air_quality.rename(
+    columns={
+        "station_antwerp": "BETR801",
+        "station_paris": "FR04014",
+        "station_london": "London Westminster",
+    }
+)
