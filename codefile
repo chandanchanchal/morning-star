@@ -19,3 +19,17 @@ air_quality_renamed = air_quality.rename(
         "station_london": "London Westminster",
     }
 )
+
+
+
+git clone https://github.com/chandanchanchal/data
+cd data
+
+hadoop fs -mkdir /demo/data/spark
+
+hadoop fs -copyFromLocal people.json /demo/data/spark/
+
+from pyspark.sql import SQLContext
+sqlContext = SQLContext(sc)
+df = sqlContext.read.json("/demo/data/spark/people.json")
+df.show()
